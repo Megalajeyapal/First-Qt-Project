@@ -1,0 +1,2345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EventGenerator</class>
+ <widget class="QMainWindow" name="EventGenerator">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>948</width>
+    <height>772</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>EventGenerator</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(130, 130, 121);</string>
+  </property>
+  <property name="inputMethodHints">
+   <set>Qt::ImhNone</set>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="loadButton">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>670</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 11pt &quot;TakaoPGothic&quot;;
+background-color: rgb(197, 131, 225);</string>
+    </property>
+    <property name="text">
+     <string>Load config file</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="customText">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>360</y>
+      <width>801</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>330</y>
+      <width>101</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 11pt &quot;TakaoPGothic&quot;;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#eeeeec;&quot;&gt;Custom Text&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="statusBox">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>450</y>
+      <width>801</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>430</y>
+      <width>121</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 11pt &quot;TakaoPGothic&quot;;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#eeeeec;&quot;&gt;Status Message&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="sendButton">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>670</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 11pt &quot;URW Bookman L&quot;;
+background-color: rgb(197, 131, 225);
+font: 75 11pt &quot;TakaoPGothic&quot;;</string>
+    </property>
+    <property name="text">
+     <string>SEND</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="logBox">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>570</y>
+      <width>801</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>540</y>
+      <width>101</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 11pt &quot;TakaoPGothic&quot;;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#eeeeec;&quot;&gt;Log Message&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>190</y>
+      <width>831</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QLineEdit" name="data_1">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>60</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="inputMethodHints">
+      <set>Qt::ImhDigitsOnly</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="data_2">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>60</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="inputMethodHints">
+      <set>Qt::ImhDigitsOnly</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="data_3">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>60</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="inputMethodHints">
+      <set>Qt::ImhDigitsOnly</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="data_4">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>60</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="inputMethodHints">
+      <set>Qt::ImhDigitsOnly</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="data_5">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>60</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="inputMethodHints">
+      <set>Qt::ImhDigitsOnly</set>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="data_6">
+     <property name="geometry">
+      <rect>
+       <x>550</x>
+       <y>60</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="inputMethodHints">
+      <set>Qt::ImhDigitsOnly</set>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="moduleId">
+     <property name="geometry">
+      <rect>
+       <x>760</x>
+       <y>60</y>
+       <width>51</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>67</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 75 11pt &quot;TakaoPGothic&quot;;</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Data 1  :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>30</y>
+       <width>67</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 75 11pt &quot;TakaoPGothic&quot;;</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#eeeeec;&quot;&gt;Data 2  :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>30</y>
+       <width>67</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 75 11pt &quot;TakaoPGothic&quot;;</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#eeeeec;&quot;&gt;Data 3  :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>30</y>
+       <width>67</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 75 11pt &quot;TakaoPGothic&quot;;</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#eeeeec;&quot;&gt;Data 4  :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>450</x>
+       <y>30</y>
+       <width>67</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 75 11pt &quot;TakaoPGothic&quot;;</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#eeeeec;&quot;&gt;Data 5  :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>550</x>
+       <y>30</y>
+       <width>67</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 75 11pt &quot;TakaoPGothic&quot;;</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#eeeeec;&quot;&gt;Data 6  :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>750</x>
+       <y>30</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(238, 238, 236);
+font: 75 11pt &quot;TakaoPGothic&quot;;</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#eeeeec;&quot;&gt;Loop :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_15">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>100</y>
+       <width>81</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 12pt &quot;Ubuntu&quot;;
+color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>Inc</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="data_1Repeat">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>100</y>
+       <width>16</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="data_2Repeat">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>100</y>
+       <width>21</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="data_3Repeat">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>100</y>
+       <width>16</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="data_4Repeat">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>100</y>
+       <width>16</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="data_5Repeat">
+     <property name="geometry">
+      <rect>
+       <x>520</x>
+       <y>100</y>
+       <width>16</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="data_6Repeat">
+     <property name="geometry">
+      <rect>
+       <x>620</x>
+       <y>100</y>
+       <width>16</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="data_7">
+     <property name="geometry">
+      <rect>
+       <x>650</x>
+       <y>60</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="inputMethodHints">
+      <set>Qt::ImhDigitsOnly</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_16">
+     <property name="geometry">
+      <rect>
+       <x>650</x>
+       <y>30</y>
+       <width>67</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(238, 238, 236);</string>
+     </property>
+     <property name="text">
+      <string>Data 7 :</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="data_7Repeat">
+     <property name="geometry">
+      <rect>
+       <x>720</x>
+       <y>100</y>
+       <width>16</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QComboBox" name="eventsBox">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>70</y>
+      <width>211</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 11pt &quot;TakaoPGothic&quot;;
+selection-background-color: rgb(214, 169, 224);
+background-color: rgb(255, 255, 255);
+</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>0x0010  AM_INFO_SYSTEM_RESET </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0024  AM_FAULT_WIRELESS_DEVICE_COMM </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0025  AM_FAULT_WIRELESS_BASE_COMM </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0026  AM_INFO_WIRELESS_LOW_BATTERY_30_DAYS </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0027  AM_INFO_WIRELESS_LOW_BATTERY_7_DAYS </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0028  AM_FAULT_WIRELESS_RF_BASE_REMOVED </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0030  AM_TEST_OUTPUT_GROUP_START </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0031  AM_TEST_PANEL_FRONT_STOP </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0032  AM_EMERGENCY_LIGHT_ATSD_ON </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0033  AM_EMERGENCY_LIGHT_ATSD_OFF 0x0033</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0034  AM_DISABLE_ADDRESS_AUTO </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0035  AM_DISABLE_ADDRESS_TIME </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0036  AM_FAULT_SHORT_CIRCUIT </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0037  AM_FAULT_OPEN_CIRCUIT </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0038  AM_QUERY_ADDRESS_HIGH_LOW_ANSWER </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0039  AM_INFO_EMERGENCY_LIGHT </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x003A  AM_TRANSPORT_MODBUS_MESSAGE </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0040  AM_FIRE_ALARM_ADDRESS </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0041  AM_TEST_ADDRESS </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0043  AM_DISABLE_ADDRESSABLE_LOOP  </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0044  AM_ENABLE_ADDRESSABLE_LOOP </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0042  AM_QUERY_ADDRESS_HIGH_LOW </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0043  AM_DISABLE_CONVENTIONAL_LINE </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0044  AM_ENABLE_CONVENTINAL_LINE </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0045  AM_TEST_ZONE_START </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0046  AM_TEST_FIRE_ALARM_ADDRESS </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0047  AM_TEST_ZONE_STOP </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0048  AM_FAULT_SYSTEM_EARTH </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0049  AM_FAULT_SYSTEM_BATTERY </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0050  AM_FAULT_SOUNDER_CIRCUIT </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0051  AM_FAULT_LOOP_RESTART </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0052  AM_DISABLE_ALARM_GROUP_TIME_DELTA  </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0052  AM_DISABLE_OUTPUT_GROUP_TIME_DELTA </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0053  AM_DISABLE_LOOP_TIME </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0054  AM_INFO_BUZZER_SILENCED </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0055  AM_FAULT_LOOPCARD </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0056  AM_FAULT_LOOP </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0057  AM_FAULT_SYSTEM_INCORRECT_SOFTWARE </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0058  AM_QUERY_LOOP_NO_OF_ADDRESSES </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0059  AM_CONTROL_SOUNDERS_OFF </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x005A  AM_INFO_GSM_SIGNAL_STRENGTH </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x005B  AM_CONTROL_ACTIVATE_TECH_DA </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x005C  AM_INFO_TECH_ACTIVATED_DA </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x005D  AM_FAULT_TECH_TIMEOUT_DA </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x005E  AM_FAULT_TECH_MONITOR_DA</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x005F  AM_INFO_RESET_TECH_DA </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0060  AM_CONTROL_SOUNDERS_ON </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0061  AM_QUERY_LOOP_NO_OF_ADDRESSES_ANSWER </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0062  AM_FAULT_SYSTEM_COMMUNICATION_BREAK </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0063  AM_QUERY_ADDRESS_ANALOG_VALUE_ANSWER </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0064  AM_INFO_MAINS_ON </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0065  AM_INFO_MAINS_OFF </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0066  AM_CONTROL_FIRE_ALARM_RESET </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0067  AM_CONTROL_FAULT_RESET </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0068  AM_FAULT_SYSTEM_COMMUNICATION </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0069  AM_QUERY_ADDRESS_ANALOG_VALUE </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x006A  AM_FAULT_MODBUS_COMMUNICATION </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x006B  AM_FAULT_SYSTEM_CHARGER </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0070  AM_DISABLE_ALARM_GROUP </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0071  AM_ENABLE_ALARM_GROUP </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0072  AM_INFO_IO_CLOSED </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0073  AM_INFO_IO_OPEN </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0074  AM_FAULT_ADDRESS </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0075  AM_PRE_ALARM </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0076  AM_CONTROL_ADDRESS_ADJUST_LIMITS </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0077  AM_INFO_ADDRESS_ESSER_FAULT_CODE </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0078  AM_DISABLE_ADDRESS </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0079  AM_ENABLE_ADDRESS </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x007A  AM_DISABLE_OUTPUT_DELTA </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x007B  AM_DISABLE_OUTPUT_TIME_DELTA </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x007C  AM_ENABLE_OUTPUT_DELTA </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x007D  AM_TEST_OUTPUT_START </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x007E  AM_TEST_OUTPUT_STOP </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x007F  AM_INFO_GSM_PANEL_STATUS </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0080  AM_FAULT_SYSTEM_MAINS </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0081  AM_CONTROL_SYSTEM_ADJUST_TIME_DATE </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0082  AM_CONTROL_SOFT_RESET</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0083  AM_INFO_INPUT_ACTIVATED </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0084  AM_CONTROL_SYSTEM_TEXT_CHANGE </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0085  AM_INFO_KEY_CLOSED </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0086  AM_INFO_KEY_OPEN </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0087  AM_INFO_EXTERNAL_EQUIPTMENT </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0088  AM_FAULT_SYSTEM_CHECK_SUM_ERROR </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0089 AM_FAULT_SYSTEM_VERSION_ERROR </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x008A  AM_FAULT_IO_UNIT </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x008B  AM_FAULT_IO_UNIT_DELTA </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x008C  AM_CONTROL_ABANDON_SHIP_ACTIVATED </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x008D  AM_CONTROL_ABANDON_SHIP_RESET </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x008E  AM_INHIBITED_ALARM </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x008F  AM_INHIBITED_ALARM_RESET </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0090  AM_FAULT_ADDRESS_AIR_FLOW </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0091  AM_CONTROL_GENERAL_ALARM_ACTIVATED </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0092  AM_CONTROL_GENERAL_ALARM_RESET </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0093  AM_TEST_PANEL_FRONT_ON </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0094  AM_FAULT_ADDRESS_ABSENT </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0095  AM_FAULT_ADDRESS_CONFLICT </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0096  AM_DISABLE_CONVENTIONAL_ZLX_AUTO </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0097  AM_DISABLE_CONVENTIONAL_MCP_AUTO </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0098  AM_QUERY_CONVENTIONAL_LOOP_ANSWER </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0099  AM_FAULT_ADDRESS_NOT_REMOVED </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x009A  AM_FAULT_SYSTEM_MODEM </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x009B  AM_FAULT_SYSTEM_MODEM_LINET </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x009C  AM_TRANSPORT_MODEM_MESSAGE </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x009D  AM_DISABLE_ZONE </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x009E  AM_DISABLE_ZONE_TIME_DELTA </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x009F  AM_ENABLE_ZONE </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00A0  AM_FAULT_SYSTEM_WATCH_DOG_ERROR </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00A1  AM_BURGLER_ALARM </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00A2  AM_TECHNICAL_ALARM </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00A3  AM_GAS_ALARM </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00A4  AM_CONTROL_BURGLAR_BYPASS_ON </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00A5  AM_CONTROL_BURGLAR_BYPASS_OFF </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00A6  AM_QUERY_ADDRESS_STATUS </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00A7  AM_QUERY_ADDRESS_STATUS_ANSWER</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00A8  AM_INFO_EEPROM_ENTERED </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00A9  AM_INFO_OUTPUT_DELAYED </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00AA  AM_INFO_OUTPUT_NO_DELAY </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00AB  AM_PRE_ALARM_RESET </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00AC  AM_FAULT_SYSTEM_BATTERY_TEMPERATURE </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00AD  AM_CONTROL_NO_OF_SYSTEMS_ANSWER </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00AE  AM_FAULT_EXTINGUISHING </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00AF  AM_FAULT_LON_COMM </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00B0  AM_QUERY_DISCOVERY_DATA_ANSWER </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00B1  AM_QUERY_DISCOVERY_DATA </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00B2  AM_FAULT_ADDRESS_NOT_DISCOVERY </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00B3  AM_FAULT_ADDRESS_DRIFT_LIMIT </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00B4  AM_FAULT_ADDRESS_NOT_ELTEK_DISCOVERY </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00B5  AM_CONTROL_MAN_OVER_BOARD_ACTIVATED </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00B6  AM_CONTROL_MAN_OVER_BOARD_RESET </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00B7  AM_INFO_ADDRESS_HIGH_ANALOG_WARNING </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00B8  AM_CONTROL_SYSTEM_ADJUST_CENTURY </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00B9  AM_FAULT_SYSTEM_NUMBER_CONFLICT </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00BA  AM_QUERY_ZONE_ANSWER </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00BB  AM_FAULT_SYSTEM_CURRENT </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00BC  AM_QUERY_ADDRESS_ANSWER </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00BD  AM_CONTROL_PANEL_SET_INFO </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00BE  AM_QUERY_POWER_INFO </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00BF  AM_QUERY_POWER_INFO_ANSWER </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00C0  AM_CONTROL_RESET_ALL_TECH </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00C1  AM_CONTROL_ACTIVATE_TECH_SECTION </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00C2   AM_CONTROL_ACTIVATE_TECH </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00C3  AM_INFO_TECH_ACTIVATED </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00C4  AM_FAULT_TECH_TIMEOUT </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00C5  AM_FAULT_TECH_MONITOR  </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00C6  AM_CONTROL_RESET_TECH </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00C7  AM_FAULT_SYSTEM_ECHELON_RESET </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00C8  AM_FAULT_SYSTEM_GSM_MODEM </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00C9  AM_CONTROL_DELAY_DISABLE </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00CA  AM_CONTROL_DELAY_ENABLE </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00CB  AM_INFO_GSM_MESSAGE_SENT </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00CC  AM_INFO_GSM_USER_LOGON </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00CD  AM_INFO_GSM_USER_LOGOFF </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00CE  AM_INFO_GSM_LOGON_STATUS </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00CF  AM_FAULT_EMERGENCY_LIGHT </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00D0  AM_FAULT_EMERGENCY_LIGHT_CHARGE </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00D1  AM_FAULT_EMERGENCY_LIGHT_BATTERY </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00D2  AM_FAULT_EMERGENCY_LIGHT_LIGHT </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00D4  AM_QUERY_ADDRESS_ESSER_ANALOG_ANSWER </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00D5  AM_QUERY_ADDRESS_STATUS </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00D6  AM_QUERY_ADDRESS_STATUS_ANSWER </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00D7  AM_INFO_ADDRESS_SERVICE_MODE </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00D8  AM_INFO_ADDRESS_ESSER_EEPROM_DATA </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00D9  AM_FAULT_ADDRESS_NOT_ESSER </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00DA  AM_QUERY_LOOP_NO_OF_ADDRESSES_DA_ANSWER </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00DB  AM_QUERY_CONVENTIONAL_LOOP_DA_ANSWER </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00DC  AM_FAULT_SYSTEM_EPROM_CHKSUM </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00DD  AM_FAULT_ADDRESS_ESSER_COMMAND_NOK </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00DE  AM_CONTROL_ESSER_SERVICE_MESSAGE </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00DF  AM_TECH_ALARM_RESET </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00E0  AM_DISABLE_SPEAKER_CIRCUIT</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00E1  AM_DISABLE_SPEAKER_CIRCUIT_TIME </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00E2  AM_ENABLE_SPEAKER_CIRCUIT </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00E3  AM_TEST_SPEAKER_CIRCUIT_START </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00E4  AM_TEST_SPEAKER_CIRCUIT_STOP </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00E5  AM_FAULT_SPEAKER_CIRCUIT_LOW </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00E6  AM_FAULT_SPEAKER_CIRCUIT_HIGH </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00E7  AM_CONTROL_MIC_SWITCH_ON </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00E8  AM_CONTROL_MIC_SWITCH_OFF </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00E9  AM_CONTROL_ACTIVATION_ON </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00EA  AM_CONTROL_ACTIVATION_OFF </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00EB  AM_INFO_PA_ON </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00EC  AM_INFO_PA_OFF </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00ED  AM_INFO_NOT_LEGAL_OPERATION </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00EE  AM_CONTROL_SPEAKER_CIRCUIT_TRIGGER_LIMIT </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00F0  AM_INFO_GSM_OPERATED </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00F1  AM_CONTROL_VA_PA_SECTION </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00F2  AM_QUERY_SYSTEM_VA_PA_STATUS </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00F3  AM_QUERY_SYSTEM_VA_PA_STATUS_ANSWER </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00F4  AM_EMERGENCY_LIGHT_TEST_COMPLETE </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00F5  AM_FAULT_ESSER_SERVICE_MESSAGE </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00F6  AM_INFO_ESSER_AN_SERVICE_MESSAGE </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00F7  AM_INFO_DEBUG </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00F8  AM_FAULT_ESSER_DETECTOR_MESSAGE </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00F9  AM_FAULT_REDUNDANT_ECOMM </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00FA  AM_CONTROL_LOGIC_OUTPUT_ACTIVATE </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00FB  AM_INFO_LOGIC_OUTPUT_FEEDBACK </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00FC  AM_CONTROL_REDUNDANCY_UNIT </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00FD  AM_FAULT_REDUNDANCY_UNIT </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x00FE  AM_DA_MEMORY_DUMP </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0100  AM_QUERY_LOOP_INFO </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0101  AM_QUERY_LOOP_INFO_ANSWER</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0230  AM_INFO_NEW_ISB_MODULE</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0231  AM_FAULT_DISCONNECTED_ISB_MODULE</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0232  AM_FAULT_RECONNECTED_ISB_MODULE</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0233  AM_FAULT_MISMATCH_ISB_MODULE</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0234  AM_INFO_CAN_BUS_ERROR_ACTIVE</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0235  AM_FAULT_CAN_BUS_ERROR_WARNING</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0236  AM_FAULT_CAN_BUS_OFF </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0237  AM_FIRE_ALARM_FAILSAFE</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0238  AM_FAULT_LOOP_MODULE_NOT_PRESENT</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0239  AM_FAULT_LOOP_MODULE_CONFIG_MISMATCH</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x023A  AM_QUERY_NODE_DISCOVERY</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x023B  AM_QUERY_NODE_DISCOVERY_ANSWER</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x023C  AM_QUERY_NODE_HEARTBEAT</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x023D  AM_QUERY_NODE_HEARTBEAT_ANSWER</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x023E  AM_INFO_NEW_ETHERNET_MODULE</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x023F  AM_FAULT_DISCONNECTED_ETHERNET_MODULE</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0240  AM_FAULT_RECONNECTED_ETHERNET_MODULE</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0201  AM_FAULT_DEVICE_TYPE_MISMATCH</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0202  AM_ENABLE_DEVICE_LED</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0203  AM_DISABLE_DEVICE_LED</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0204  AM_FAULT_LOOP_SHORT_CIRCUIT</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0205  AM_FAULT_LOOP_OPEN_CIRCUIT</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0206  AM_INFO_LOOP_INIT_START</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0207  AM_INFO_LOOP_INIT_STATUS</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0208  AM_INFO_LOOP_INIT_DONE</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0260  AM_FAULT_PSU_FUSE</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0261  AM_INFO_HOUSING_CONTACT_STATUS</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0290  AM_FAULT_PANEL_ADDRESS_MISMATCH</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0291  AM_INFO_PANEL_NUMBER_CHANGED</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0292  AM_FAULT_SYSTEM_UNAUTHENTICATED_MESSAGES</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0293  AM_FAULT_SYSTEM_WATCHDOG_RESET</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0294  AM_QUERY_NETWORK_SYNC_REQUEST</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0295  AM_QUERY_NETWORK_SYNC_RESPONSE</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0296  AM_QUERY_HMI_VERSION_REQUEST</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0297  AM_QUERY_HMI_VERSION_RESPONSE</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0298  AM_FAULT_NODE_INVALID_RESPONSE</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0400  AM_CONTROL_FX_OUTPUT</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0401  AM_DISABLE_INPUT</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0402  AM_DISABLE_INPUT_TIME</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0403  AM_ENABLE_INPUT</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0404  AM_DISABLE_OUTPUT</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0405  AM_DISABLE_OUTPUT_TIME</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0406  AM_ENABLE_OUTPUT </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0407  AM_DISABLE_ALARM_GROUP_TIME</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x040D  AM_DISABLE_OUTPUT_GROUP_TIME</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x040E  AM_ENABLE_OUTPUT_GROUP</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0408  AM_DISABLE_ZONE_TIME</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x040C  AM_DISABLE_OUTPUT_GROUP</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x040D  AM_DISABLE_OUTPUT_GROUP_TIME</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0053  AM_DISABLE_ADDRESSABLE_LOOP_TIME</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0501  AM_INFO_PANEL_LOGIN_LEVEL </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0502  AM_USB_MASS_STORAGE_DEVICE_CONNECTED</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0503  AM_USB_MASS_STORAGE_DEVICE_DISCONNECTED</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0504  AM_INFO_CONFIGURATION_TOOL_CONNECTED</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0505  AM_UPDATE_FROM_CONNECTED_USB</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0506  AM_UPDATE_FROM_NETWORK_LOCATION</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0507  AM_FAULT_MASS_STORAGE_DEVICE</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0508  AM_INFO_START_FIRMWARE_UPDATE </string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0509  AM_INFO_FIRMWARE_UPDATE_DONE</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x050A  AM_INFO_FIRMWARE_UPDATE_PROGRESS</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x050B  AM_INFO_SYSTEM_REBOOT</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x050C  AM_UMOUNT_USB_MASS_STORAGE_DEVICE</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x050D  AM_SYSTEM_MAINTENANCE_MODE_ON</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x050E  AM_SYSTEM_MAINTENANCE_MODE_OFF</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x040B  AM_INFO_ALARM_TRANSMITTER_DELAY</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x8000  START_OF_INTERNAL_MSGS</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x8001  IM_ACTIVATE_OUTPUT</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x8002  IM_DEACTIVATE_OUTPUT</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x8003  IM_FIRE_ALARM_ADDRESS</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x8004  IM_PRE_ALARM</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x8005  IM_TECHNICAL_ALARM</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x8006  IM_FAULT_ADDRESS</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x8007  IM_CONTROL_FIRE_ALARM_RESET</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x8008  IM_PRE_ALARM_RESET</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x8009  IM_TECH_ALARM_RESET</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x8010  IM_CONTROL_FAULT_RESET</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x8011  IM_TEST_ALARM_RESET_IN_CNE</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x8012  IM_CONFIG_WRITE_START</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x8013  IM_CONFIG_WRITE_STOP</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x8014  IM_FUNCTION_TIMER_EXPIRED_IN_CNE</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x8015  IM_AUDIO_TIMER_EXPIRED_IN_CNE</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x8016  IM_RESOUND_ON_ALARM_FROM_OTHERZONE</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x809D  IM_DISABLE_ZONE</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x8408  IM_DISABLE_ZONE_TIME</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x8404  IM_DISABLE_OUTPUT</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x8405  IM_DISABLE_OUTPUT_TIME</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x8401  IM_DISABLE_INPUT</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x8402  IM_DISABLE_INPUT_TIME</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x8070  IM_DISABLE_ALARM_GROUP</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x8406  IM_DISABLE_OUTPUT_GROUP</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x8407  IM_DISABLE_OUTPUT_GROUP_TIME</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x8251  IM_ENABLE_BUZZER_BACKLIGHT</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x8250  IM_DISABLE_BUZZER_BACKLIGHT</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x8409  IM_CONTROL_ACTIVATE_OUTPUT</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0840A  IM_CONTROL_DEACTIVATE_OUTPUT</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x840B  IM_CONTROL_ACTIVATE_CONTROL_GROUP</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>0x0840C  IM_CONTROL_DEACTIVATE_CONTROL_GROUP </string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QSpinBox" name="repeatSpinbox">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>140</y>
+      <width>71</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="maximum">
+     <number>255</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="delayBox">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>140</y>
+      <width>71</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="cancelRepeatButton">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>140</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="mouseTracking">
+     <bool>false</bool>
+    </property>
+    <property name="acceptDrops">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 11pt &quot;TakaoPGothic&quot;;
+background-color: rgb(197, 131, 225);
+</string>
+    </property>
+    <property name="text">
+     <string>Cancel Repeat</string>
+    </property>
+    <property name="autoRepeat">
+     <bool>false</bool>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>150</y>
+      <width>61</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#eeeeec;&quot;&gt;Repeat    :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>150</y>
+      <width>51</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#eeeeec;&quot;&gt;Delay  :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="exitButton">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>670</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 11pt &quot;TakaoPGothic&quot;;
+background-color: rgb(197, 131, 225);
+</string>
+    </property>
+    <property name="text">
+     <string>Exit</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="ipAddress">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>70</y>
+      <width>221</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_13">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>40</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 11pt &quot;TakaoPGothic&quot;;</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#eeeeec;&quot;&gt;IP Address   :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="helpButton">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>10</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 11pt &quot;TakaoPGothic&quot;;
+background-color: rgb(197, 131, 225);</string>
+    </property>
+    <property name="text">
+     <string>Help</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="connectButton">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>670</y>
+      <width>121</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 11pt &quot;TakaoPGothic&quot;;
+background-color: rgb(197, 131, 225);</string>
+    </property>
+    <property name="text">
+     <string>Connect</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="moduleType">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>140</y>
+      <width>141</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 11pt &quot;TakaoPGothic&quot;;
+selection-background-color: rgb(214, 169, 224);
+background-color: rgb(255, 255, 255);</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>Loop Id</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Network Id</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>I/O Module Id</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label_14">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>150</y>
+      <width>31</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(238, 238, 236);</string>
+    </property>
+    <property name="text">
+     <string>Secs</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_17">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>40</y>
+      <width>67</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Events :</string>
+    </property>
+   </widget>
+   <zorder>customText</zorder>
+   <zorder>statusBox</zorder>
+   <zorder>logBox</zorder>
+   <zorder>label_9</zorder>
+   <zorder>label_10</zorder>
+   <zorder>groupBox</zorder>
+   <zorder>eventsBox</zorder>
+   <zorder>repeatSpinbox</zorder>
+   <zorder>delayBox</zorder>
+   <zorder>cancelRepeatButton</zorder>
+   <zorder>label_11</zorder>
+   <zorder>label_12</zorder>
+   <zorder>ipAddress</zorder>
+   <zorder>label_13</zorder>
+   <zorder>moduleType</zorder>
+   <zorder>helpButton</zorder>
+   <zorder>sendButton</zorder>
+   <zorder>exitButton</zorder>
+   <zorder>loadButton</zorder>
+   <zorder>connectButton</zorder>
+   <zorder>label_14</zorder>
+   <zorder>label_8</zorder>
+   <zorder>label_17</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>948</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>eventsBox</tabstop>
+  <tabstop>repeatSpinbox</tabstop>
+  <tabstop>data_1</tabstop>
+  <tabstop>helpButton</tabstop>
+  <tabstop>data_4</tabstop>
+  <tabstop>data_2</tabstop>
+  <tabstop>data_3</tabstop>
+  <tabstop>logBox</tabstop>
+  <tabstop>data_5</tabstop>
+  <tabstop>customText</tabstop>
+  <tabstop>data_6</tabstop>
+  <tabstop>moduleId</tabstop>
+  <tabstop>data_1Repeat</tabstop>
+  <tabstop>data_2Repeat</tabstop>
+  <tabstop>data_3Repeat</tabstop>
+  <tabstop>data_4Repeat</tabstop>
+  <tabstop>data_5Repeat</tabstop>
+  <tabstop>data_6Repeat</tabstop>
+  <tabstop>data_7</tabstop>
+  <tabstop>data_7Repeat</tabstop>
+  <tabstop>statusBox</tabstop>
+  <tabstop>loadButton</tabstop>
+  <tabstop>delayBox</tabstop>
+  <tabstop>cancelRepeatButton</tabstop>
+  <tabstop>exitButton</tabstop>
+  <tabstop>ipAddress</tabstop>
+  <tabstop>sendButton</tabstop>
+  <tabstop>connectButton</tabstop>
+  <tabstop>moduleType</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
